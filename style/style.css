@@ -1,0 +1,124 @@
+
+/* GLOBAL */
+
+html, body, .app{
+  height: 100%;
+}
+
+body {
+  background-color: #e6e6e6 !important;
+}
+
+.content-wrapper {
+  height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* OVERWRITES */
+
+.definitions div p {
+  margin-bottom: 8px !important;
+}
+
+.social-link:nth-child(2) {
+  padding-left: 16px;
+}
+
+.social-link {
+  color: #4a4a4a;
+  -webkit-transition: color 400ms ease-in-out; /* Safari */
+  transition: color 400ms ease-in-out;
+}
+
+.medium:hover {
+  color: #02B875;
+}
+
+.linkedin:hover {
+  color: #0077B5;
+}
+
+/* HEADER */
+
+.header {
+  padding-top: 10px;
+  width: 720px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 300px;
+}
+
+
+.logo {
+  position: relative;
+  width: 180px;
+  height: 140px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.left-side {
+  float: left;
+  width: 50%;
+  height: 100%;
+  border-right: 2px solid black;
+  text-align: center;
+}
+
+.right-side {
+  float: right;
+  width: 50%;
+  height: 100%;
+  border-left: 2px solid black;
+  text-align: center;
+}
+
+.logo-letter {
+  font-size: 80px;
+  line-height: 140px;
+}
+
+.definitions {
+  position: relative;
+  padding: 24px 0;
+}
+
+/* MAIN PAPER */
+
+.paper {
+  font-family: Courier;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 4px solid #373737;
+  margin-top: 360px;
+  box-shadow: 0px 0px 40px #6b6b6b;
+  padding-left: 40px;
+}
+
+.address {
+  padding-top: 16px;
+  color: #4a4a4a;
+}
+
+
+/* BLINKER */
+
+.flash {
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.2s;
+}
+
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  70% { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.hide {
+  display: none;
+}
