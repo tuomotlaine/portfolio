@@ -2,7 +2,7 @@ import React from 'react';
 
 const BottomAddress = () => {
   const bottomStyle = {
-    width: '720px',
+    width: '100%',
     position: 'fixed',
     left: '50%',
     transform: 'translateX(-50%)',

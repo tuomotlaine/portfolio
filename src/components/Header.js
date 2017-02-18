@@ -26,7 +26,7 @@ class Header extends Component {
   render() {
 
     const headerStyle = {
-      paddingTop: '10px',
+      paddingTop: '32px',
       width: '720px',
       position: 'fixed',
       left: '50%',
@@ -50,11 +50,13 @@ class Header extends Component {
         <div className="definitions row">
           <div className="col-xs-12 text-xs-center">
             <p>Full-stack Prototypist</p>
-            <p>Service Design / UX / UI / Front-end <br/>
+            <p className="hidden-xs-down">Service Design / UX / UI / Front-end <br/>
+              Lives in Helsinki, Finland</p>
+            <p className="hidden-md-up">Service Design <br/> UX / UI / Front-end <br/>
               Lives in Helsinki, Finland</p>
             <p>
-              <a href="" className="social-link header linkedin"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-              <a href="" className="social-link header medium"><i className="fa fa-medium fa-3x" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/tuomo-laine-583a948a/" target="_blank" className="social-link header linkedin"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+              <a href="https://medium.com/@tikilain" target="_blank" className="social-link header medium"><i className="fa fa-medium fa-3x" aria-hidden="true"></i></a>
             </p>
           </div>
         </div>

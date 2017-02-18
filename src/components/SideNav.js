@@ -37,7 +37,7 @@ class SideNav extends Component {
     };
 
     return(
-      <div style={sideNavStyle}>
+      <div style={sideNavStyle} className="hidden-md-down">
         <div className="logo-side">
           <div className="left-side">
             <span className="logo-letter-side">T</span>
@@ -48,10 +48,10 @@ class SideNav extends Component {
         </div>
         <div className="definitions row">
           <div className="col-xs-12 text-xs-center">
-            <a href="" className="social-link linkedin"><i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/tuomo-laine-583a948a/" className="social-link linkedin"><i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
           </div>
           <div className="col-xs-12 text-xs-center" style={{ paddingTop: '24px' }}>
-            <a href="" className="social-link medium"><i className="fa fa-medium fa-2x" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@tikilain" className="social-link medium"><i className="fa fa-medium fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>

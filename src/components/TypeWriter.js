@@ -29,6 +29,7 @@ class TypeWriter extends Component {
   }
 
   componentDidUpdate(prevProps, prevState){
+    
     if(prevState.key != this.state.key && this.state.key < this.state.input.length){
 
       setTimeout(() => {
@@ -47,7 +48,7 @@ class TypeWriter extends Component {
 
   render() {
     return(
-      <p>{this.state.output}<span className={this.state.done ? 'hide' : 'flash'}>_</span></p>
+      <p className="typewriter-text">{this.state.output}<span className={this.state.done ? 'hide' : 'flash'}>_</span></p>
     );
   }
 }
