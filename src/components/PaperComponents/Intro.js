@@ -39,7 +39,7 @@ class Intro extends Component {
         <div className="row" style={{marginTop: '40px'}}>
           <div className="col-xs-12">
             <p>{this.state.timeStamp}</p>
-            <TypeWriter speed={20} input="Welcome!" onReady={this.renderComputer.bind(this)}
+            <TypeWriter speed={20} input="Welcome!  <br/> ------" onReady={this.renderComputer.bind(this)}
             fontSize="1.1rem"
             />
           </div>
