@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { toggleAutoScroll } from '../actions';
 
 class RenderComputer extends Component {
   constructor(props){
     super(props);
+  }
+
+  componentWillMount(){
+
+    if(this.props.noAutoScroll){
+      this.props.toggleAutoScroll(true);
+    }
   }
 
   renderChildrenOneByOne(){
@@ -25,4 +34,8 @@ class RenderComputer extends Component {
   }
 }
 
-export default RenderComputer;
+RenderComputer.defaultProps = {
+  noAutoScroll: true
+};
+
+export default connect(null, { toggleAutoScroll })(RenderComputer);

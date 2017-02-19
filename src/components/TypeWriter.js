@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { toggleAutoScroll } from '../actions';
 
 class TypeWriter extends Component {
 
@@ -21,8 +23,14 @@ class TypeWriter extends Component {
       output: {__html: newOutput},
       key: newKey
     });
-
   }
+
+  componentWillMount(){
+    if(this.props.forceStartAutoScroll){
+      this.props.toggleAutoScroll(true);
+    }
+  }
+
 
   componentDidMount(){
     const { input, key } = this.state;
@@ -30,14 +38,18 @@ class TypeWriter extends Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-    // document.body.scrollTop = document.body.scrollHeight;
-    if(prevState.key != this.state.key && this.state.key < this.state.input.length){
+    
+    if(this.props.autoScroll){
+      document.body.scrollTop = document.body.scrollHeight;
+    }
 
+    if(prevState.key != this.state.key && this.state.key < this.state.input.length){
       setTimeout(() => {
           this.addCharToOutput(this.state.input[this.state.key])
       }, this.props.speed);
     }else{
       if(!this.state.informedParentOfReady){
+
         this.props.onReady();
         this.setState({
           done: true,
@@ -64,7 +76,15 @@ TypeWriter.propTypes = {
 TypeWriter.defaultProps = {
   input: 'You forgot to input some text brah.',
   speed: 60,
-  fontSize: '1rem'
+  fontSize: '1rem',
+  defaultAutoScroll: true,
+  forceStartAutoScroll: false
 };
 
-export default TypeWriter;
+const mapStateToProps = (state) => {
+  return {
+    autoScroll: state.autoScroll
+  };
+};
+
+export default connect(mapStateToProps, { toggleAutoScroll })(TypeWriter);

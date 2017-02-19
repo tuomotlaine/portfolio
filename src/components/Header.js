@@ -1,26 +1,48 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { toggleAutoScroll } from '../actions';
 
 class Header extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      top: '0px'
+      top: '0px',
+      scrollDetection: 0
     }
   }
 
-  handleScroll(){
+  handleScroll(e){
     let pos = document.body.scrollTop/2;
     this.setState({
       top: `-${pos}px`
     });
+
+    let newScrollDetection = this.state.scrollDetection + 1;
+    setTimeout(() => {
+      this.setState({
+        scrollDetection: 0
+      });
+    }, 2000);
+
+    this.setState({
+      scrollDetection: newScrollDetection
+    });
+
+    if(this.state.scrollDetection > 18){
+      this.props.toggleAutoScroll(false);
+      this.setState({
+        scrollDetection: 0
+      });
+    }
   }
 
   componentDidMount(){
-    window.addEventListener('scroll', this.handleScroll.bind(this));
+    window.addEventListener('scroll', (e) => { this.handleScroll(e)});
   }
+
   componentWillUnmount(){
-    window.removeEventListener('scroll', this.handleScroll.bind(this));
+    window.removeEventListener('scroll', (e) => { this.handleScroll(e)});
   }
 
   render() {
@@ -66,4 +88,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default connect(null, { toggleAutoScroll })(Header);

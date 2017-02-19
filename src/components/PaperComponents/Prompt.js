@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import { connect } from 'react-redux';
+import { toggleAutoScroll } from '../../actions';
 
 class Prompt extends Component {
   constructor(props){
@@ -8,6 +10,7 @@ class Prompt extends Component {
 
   handleClick(args){
     this.props.userSelected(args);
+    this.props.toggleAutoScroll(true);
   }
 
   render(){
@@ -41,4 +44,4 @@ Prompt.defaultProps = {
 
 
 
-export default Prompt;
+export default connect(null, { toggleAutoScroll })(Prompt);

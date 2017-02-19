@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import ScrollReducer from './ScrollReducer';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  autoScroll: ScrollReducer
 });
 
 export default rootReducer;

@@ -14,7 +14,7 @@ const BottomAddress = () => {
   return(
     <div style={bottomStyle}>
       <div className="row">
-        <div className="address col-xs-12 text-xs-center">
+        <div className="address col-xs-12 text-xs-center hidden-sm-down">
           <p>tuomo(at)tuomolaine.com</p>
         </div>
       </div>

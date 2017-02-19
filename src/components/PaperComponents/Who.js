@@ -13,6 +13,7 @@ class Who extends Component {
   }
 
   renderComputer(){
+
     let rcc = this.state.renderComputerCounter + 1;
     this.setState({
       renderComputerCounter: rcc
@@ -21,7 +22,6 @@ class Who extends Component {
 
   componentDidUpdate(){
 
-    //document.body.scrollTop = document.body.scrollHeight;
   }
 
   render() {
@@ -42,7 +42,7 @@ class Who extends Component {
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12 col-md-4" style={{paddingBottom: '20px'}}>
             <img className="img-responsive center-block rounded"  src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgLAAAAJDNjOTdlMzFmLWI3MzMtNDFhOS05NTQyLTNmZTg0Y2VjZjIxOQ.jpg" alt="Image of Tuomo"/>
-            <figcaption>^ This is me.</figcaption>
+            <figcaption className="text-xs-center">^ This is me.</figcaption>
           </div>
           <div className="col-xs-12 col-md-8">
             <TypeWriter speed={20} input="I usually start my projects by trying to understand the underlying business and customer problems at hand. For this I use tools like <a target='_blank' href='https://leanservicecreation.com/'>Lean Service Creation.</a> <br /> <br /> The first prototypes I usually build by pen and paper, from which I gradually move to use technologies such as Adobe PS/XD/AI, HTML, CSS, Javascript, Firebase, React.js or React-Native." onReady={this.renderComputer.bind(this)}/>

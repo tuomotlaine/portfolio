@@ -7,8 +7,11 @@ class Intro extends Component {
 
   constructor(props){
     super(props);
+    let autoScrollOffOnDesktop = screen.width < 361 ? true : false;
+
     this.state = {
-      renderComputerCounter: 0
+      renderComputerCounter: 0,
+      initAutoScroll: autoScrollOffOnDesktop
     }
   }
 
@@ -21,16 +24,18 @@ class Intro extends Component {
 
   componentDidUpdate(){
 
-    //document.body.scrollTop = document.body.scrollHeight;
   }
 
   render() {
 
     return(
-      <RenderComputer renderChild={this.state.renderComputerCounter}>
+      <RenderComputer renderChild={this.state.renderComputerCounter}
+      noAutoScroll={this.state.initAutoScroll}
+      >
         <div className="row" style={{marginTop: '40px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="Welcome!" onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Welcome!" onReady={this.renderComputer.bind(this)}
+            />
           </div>
         </div>
         <div className="row">
@@ -40,7 +45,7 @@ class Intro extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="What would like to know about me?" onReady={this.renderComputer.bind(this)}/>
+            <TypeWriter speed={20} input="What would like to know about me?" onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <Prompt userSelected={(args) => {this.props.nextSection(args)}}

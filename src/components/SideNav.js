@@ -5,12 +5,12 @@ class SideNav extends Component {
   constructor(props){
     super(props);
     this.state = {
-      left: '-122px'
+      left: '-200px'
     }
   }
 
   handleScroll(){
-    let pos = -122 + document.body.scrollTop/2.5;
+    let pos = -180 + document.body.scrollTop/2.5;
       if(pos <= 0){
       this.setState({
         left: `${pos}px`
@@ -31,13 +31,14 @@ class SideNav extends Component {
       paddingTop: '32px',
       paddingLeft: '32px',
       position: 'fixed',
+      width: '200px',
       left: this.state.left,
       top: 0,
       height: '320px'
     };
 
     return(
-      <div style={sideNavStyle} className="hidden-md-down">
+      <div style={sideNavStyle} className="hidden-md-down" id="sideNav">
         <div className="logo-side">
           <div className="left-side">
             <span className="logo-letter-side">T</span>
