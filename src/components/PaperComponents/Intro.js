@@ -20,7 +20,8 @@ class Intro extends Component {
   }
 
   componentDidUpdate(){
-  //  document.body.scrollTop = document.body.scrollHeight;
+
+    //document.body.scrollTop = document.body.scrollHeight;
   }
 
   render() {
@@ -34,7 +35,7 @@ class Intro extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="I am a guy who loves to validate ideas/products/services." onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="I am Tuomo - a guy who loves to validate ideas/products/services." onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row">
@@ -42,7 +43,9 @@ class Intro extends Component {
             <TypeWriter speed={20} input="What would like to know about me?" onReady={this.renderComputer.bind(this)}/>
           </div>
         </div>
-        <Prompt userSelected={(args) => {this.props.nextSection(args)}}/>
+        <Prompt userSelected={(args) => {this.props.nextSection(args)}}
+
+        />
       </RenderComputer>
     );
   }

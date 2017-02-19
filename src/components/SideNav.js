@@ -53,6 +53,9 @@ class SideNav extends Component {
           <div className="col-xs-12 text-xs-center" style={{ paddingTop: '24px' }}>
             <a href="https://medium.com/@tikilain" className="social-link medium"><i className="fa fa-medium fa-2x" aria-hidden="true"></i></a>
           </div>
+          <div className="col-xs-12 text-xs-center" style={{ paddingTop: '24px' }}>
+            <a href="https://github.com/tuomotlaine" target="_blank" className="social-link github"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
+          </div>
         </div>
       </div>
     );

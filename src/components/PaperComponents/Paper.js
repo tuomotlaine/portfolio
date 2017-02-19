@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Intro from './Intro';
+import Work from './Work';
+import Who from './Who';
 import BottomAddress from './Bottomaddress';
 
 
@@ -14,9 +16,15 @@ class Paper extends Component {
 
   handleSelect(args){
 
-    if(args === 'Intro'){
+    if(args === 'Who'){
       let newState = this.state.components;
-      newState.push(<Intro nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
+      newState.push(<Who nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
+      this.setState({
+        components: newState
+      });
+    } else if(args === 'Work'){
+      let newState = this.state.components;
+      newState.push(<Work nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
       this.setState({
         components: newState
       });

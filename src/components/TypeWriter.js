@@ -5,7 +5,7 @@ class TypeWriter extends Component {
   constructor(props){
     super(props);
     this.state = {
-      output: '',
+      output: {__html: ''},
       input: props.input.split(''),
       key: 0,
       done: false,
@@ -14,10 +14,11 @@ class TypeWriter extends Component {
   }
 
   addCharToOutput(c){
-    let newOutput = this.state.output + c;
+
+    let newOutput = this.state.output.__html + c;
     let newKey = this.state.key + 1;
     this.setState({
-      output: newOutput,
+      output: {__html: newOutput},
       key: newKey
     });
 
@@ -29,7 +30,7 @@ class TypeWriter extends Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-    
+    // document.body.scrollTop = document.body.scrollHeight;
     if(prevState.key != this.state.key && this.state.key < this.state.input.length){
 
       setTimeout(() => {
@@ -48,7 +49,7 @@ class TypeWriter extends Component {
 
   render() {
     return(
-      <p className="typewriter-text">{this.state.output}<span className={this.state.done ? 'hide' : 'flash'}>_</span></p>
+      <p className="typewriter-text" style={{fontSize: this.props.fontSize}}><span dangerouslySetInnerHTML={this.state.output}></span><span className={this.state.done ? 'hide' : 'flash'}>_</span></p>
     );
   }
 }
@@ -56,12 +57,14 @@ class TypeWriter extends Component {
 TypeWriter.propTypes = {
   input: React.PropTypes.string.isRequired,
   speed: React.PropTypes.number.isRequired,
-  onReady: React.PropTypes.func.isRequired
+  onReady: React.PropTypes.func.isRequired,
+  fontSize: React.PropTypes.string
 };
 
 TypeWriter.defaultProps = {
   input: 'You forgot to input some text brah.',
-  speed: 60
+  speed: 60,
+  fontSize: '1rem'
 };
 
 export default TypeWriter;

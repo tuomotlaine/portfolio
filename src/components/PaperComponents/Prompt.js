@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 class Prompt extends Component {
   constructor(props){
@@ -11,16 +12,33 @@ class Prompt extends Component {
 
   render(){
     return(
-      <div className="row">
+      <div className="row" style={{paddingTop: '20px'}}>
         <div className="col-xs-12 text-xs-center">
-          <p><a onClick={() => {this.handleClick('Intro')}} className="option">Option 1</a></p>
-          <p><a className="option">Option 2</a></p>
-          <p><a className="option">Option 3</a></p>
-          <p><a className="option">Option 4</a></p>
+          {_.map(this.props.prompts, (v, k) => {
+              let uniqueKey = v + k + new Date().getTime;
+              return (
+                <p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>
+              );
+          })
+          }
         </div>
       </div>
     );
   }
 }
+
+Prompt.propTypes = {
+  prompts: React.PropTypes.object.isRequired
+};
+
+Prompt.defaultProps = {
+  prompts: {
+    Who: 'Tell me about Tuomo',
+    Work: 'Show me your latest work',
+    Contact: 'How can I contact you?'
+  }
+};
+
+
 
 export default Prompt;

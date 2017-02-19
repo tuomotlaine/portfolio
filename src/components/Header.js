@@ -52,11 +52,12 @@ class Header extends Component {
             <p>Full-stack Prototypist</p>
             <p className="hidden-xs-down">Service Design / UX / UI / Front-end <br/>
               Lives in Helsinki, Finland</p>
-            <p className="hidden-md-up">Service Design <br/> UX / UI / Front-end <br/>
+            <p className="hidden-sm-up">Service Design <br/> UX / UI / Front-end <br/>
               Lives in Helsinki, Finland</p>
             <p>
               <a href="https://www.linkedin.com/in/tuomo-laine-583a948a/" target="_blank" className="social-link header linkedin"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
               <a href="https://medium.com/@tikilain" target="_blank" className="social-link header medium"><i className="fa fa-medium fa-3x" aria-hidden="true"></i></a>
+              <a href="https://github.com/tuomotlaine" target="_blank" className="social-link header github"><i className="fa fa-github fa-3x" aria-hidden="true"></i></a>
             </p>
           </div>
         </div>
