@@ -9,9 +9,12 @@ class Intro extends Component {
     super(props);
     let autoScrollOffOnDesktop = screen.width < 361 ? true : false;
 
+    const time = new Date();
+
     this.state = {
       renderComputerCounter: 0,
-      initAutoScroll: autoScrollOffOnDesktop
+      initAutoScroll: autoScrollOffOnDesktop,
+      timeStamp: `${time.getDate()}/${time.getMonth()+1}/${time.getFullYear()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
     }
   }
 
@@ -26,6 +29,7 @@ class Intro extends Component {
 
   }
 
+
   render() {
 
     return(
@@ -34,7 +38,9 @@ class Intro extends Component {
       >
         <div className="row" style={{marginTop: '40px'}}>
           <div className="col-xs-12">
+            <p>{this.state.timeStamp}</p>
             <TypeWriter speed={20} input="Welcome!" onReady={this.renderComputer.bind(this)}
+            fontSize="1.1rem"
             />
           </div>
         </div>
