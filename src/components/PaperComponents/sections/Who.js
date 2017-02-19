@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TypeWriter from '../TypeWriter';
-import RenderComputer from '../RenderComputer';
-import Prompt from './Prompt';
+import TypeWriter from '../../TypeWriter';
+import RenderComputer from '../../RenderComputer';
+import Prompt from '../Prompt';
 
 class Who extends Component {
 
@@ -65,4 +65,4 @@ class Who extends Component {
   }
 }
 
-export default Who;
+export { Who };

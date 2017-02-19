@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Intro from './Intro';
-import Work from './Work';
-import Who from './Who';
+import { Intro, Who, WhoMore, Work } from './sections';
 import BottomAddress from './Bottomaddress';
 
 

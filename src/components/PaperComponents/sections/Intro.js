@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TypeWriter from '../TypeWriter';
-import RenderComputer from '../RenderComputer';
-import Prompt from './Prompt';
+import TypeWriter from '../../TypeWriter';
+import RenderComputer from '../../RenderComputer';
+import Prompt from '../Prompt';
 
 class Intro extends Component {
 
@@ -62,4 +62,4 @@ class Intro extends Component {
   }
 }
 
-export default Intro;
+export { Intro };
