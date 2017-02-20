@@ -57,6 +57,10 @@ body {
   color: #171515;
 }
 
+.print:hover{
+  color: #fafafa;
+}
+
 /* HEADER */
 
 
@@ -181,6 +185,7 @@ span a:hover {
 
 .rounded {
   border-radius: 8px;
+  max-width: 300px;
 }
 
 .monospace {
@@ -205,4 +210,24 @@ span a:hover {
   from { opacity: 1.0; }
   70% { opacity: 1.0; }
   to { opacity: 0.0; }
+}
+
+
+/* PRINT */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .paper * {
+    visibility: visible;
+  }
+
+  .print-header * {
+    visibility: visible;
+  }
+
+  .logo {
+    border: 1px solid black;
+  }
 }

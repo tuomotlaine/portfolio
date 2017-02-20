@@ -29,7 +29,7 @@ class Header extends Component {
       scrollDetection: newScrollDetection
     });
 
-    console.log('sd:', this.state.scrollDetection);
+    // console.log('sd:', this.state.scrollDetection);
     if(this.state.scrollDetection > 39){
       this.props.toggleAutoScroll(false);
       this.setState({
