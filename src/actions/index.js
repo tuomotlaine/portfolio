@@ -1,4 +1,4 @@
-import { AUTOSCROLL_TOGGLE } from './types';
+import { AUTOSCROLL_TOGGLE, ADD_CONTENT_AS_SHOWN } from './types';
 
 export const toggleAutoScroll = (bool) => {
   return {
@@ -6,3 +6,10 @@ export const toggleAutoScroll = (bool) => {
     payload: bool
   };
 };
+
+export const addContentToState = (name) => {
+  return {
+    type: ADD_CONTENT_AS_SHOWN,
+    payload: name
+  }
+}

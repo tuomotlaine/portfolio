@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Intro, Who, WhoMore, Work, WorkMore, Contact, Music } from './sections';
+import { Intro, Who, WhoMore, Work, WorkMore, Contact, Music, Photos } from './sections';
 
 class Paper extends Component {
   constructor(props){
@@ -45,6 +45,12 @@ class Paper extends Component {
     } else if(args === 'Music'){
       let newState = this.state.components;
       newState.push(<Music nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
+      this.setState({
+        components: newState
+      });
+    } else if(args === 'Photos'){
+      let newState = this.state.components;
+      newState.push(<Photos nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
       this.setState({
         components: newState
       });

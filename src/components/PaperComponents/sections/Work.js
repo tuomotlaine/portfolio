@@ -51,8 +51,10 @@ class Work extends Component {
         </div>
         <Prompt userSelected={(args) => {this.props.nextSection(args)}}
         prompts={{
-          WorkMore: 'Continue',
+          WorkMore: 'Tell me about the other projects.',
           Who: 'Actually, tell me who you are?',
+          WhoMore: 'Tell me more about you ',
+          Photos: 'Show me some of the photos you have taken',
           Contact: 'How can I contact you?'
         }}
         />

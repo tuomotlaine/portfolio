@@ -50,7 +50,10 @@ class Music extends Component {
         <Prompt userSelected={(args) => {this.props.nextSection(args)}}
           prompts={{
             Who: 'Tell me about who Tuomo is as a person',
+            WhoMore: 'Tell me more about you ',
+            Photos: 'Show me some of the photos you have taken',
             Work: 'Show me your latest work',
+            WorkMore: 'Tell me about the other projects.',
             Contact: 'Could you show me your contact info?'
           }}
         />

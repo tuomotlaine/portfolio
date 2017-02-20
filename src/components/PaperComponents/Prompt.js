@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
-import { toggleAutoScroll } from '../../actions';
+import { toggleAutoScroll, addContentToState } from '../../actions';
 
 class Prompt extends Component {
   constructor(props){
@@ -11,17 +11,49 @@ class Prompt extends Component {
   handleClick(args){
     this.props.userSelected(args);
     this.props.toggleAutoScroll(true);
+    this.props.addContentToState(args);
   }
 
   render(){
+
     return(
       <div className="row" style={{paddingTop: '20px'}}>
         <div className="col-xs-12 text-xs-center">
           {_.map(this.props.prompts, (v, k) => {
               let uniqueKey = v + k + new Date().getTime;
-              return (
-                <p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>
-              );
+
+              if( k == 'WhoMore' || k == 'WorkMore' || k == 'Photos'){
+
+                switch(k) {
+                  case 'WhoMore':
+                    if(!_.includes(this.props.shownContent, 'Who')){
+                      return;
+                    }else {
+                      return (<p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>);
+                    }
+
+                  case 'WorkMore':
+                    if(!_.includes(this.props.shownContent, 'Work')){
+                      return;
+                    }else{
+                      return (<p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>);
+                    }
+                  case 'Photos':
+                    if(!_.includes(this.props.shownContent, 'WhoMore')){
+                      return;
+                    }else{
+                      return (<p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>);
+                    }
+                }
+              } else if(k != 'Contact' && !_.includes(this.props.shownContent, k)){
+                return (
+                  <p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>
+                );
+              }else if(k == 'Contact'){
+                return (
+                  <p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>
+                );
+              }
           })
           }
           <p className="text-xs-center">***</p>
@@ -40,9 +72,14 @@ Prompt.defaultProps = {
     Who: 'Tell me about Tuomo',
     Work: 'Show me your latest work',
     Contact: 'How can I contact you?'
-  }
+  },
+  key: new Date().getTime
 };
 
+const mapStateToProps = (state) => {
+  return {
+    shownContent: state.shownContent
+  };
+};
 
-
-export default connect(null, { toggleAutoScroll })(Prompt);
+export default connect(mapStateToProps, { toggleAutoScroll, addContentToState })(Prompt);

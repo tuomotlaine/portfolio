@@ -5,3 +5,4 @@ export * from './Work';
 export * from './WorkMore';
 export * from './Music';
 export * from './Contact';
+export * from './Photos';

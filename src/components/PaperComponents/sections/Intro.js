@@ -70,9 +70,9 @@ class Intro extends Component {
               <p className="hidden-sm-up">Service Design <br/> UX / UI / Front-end <br/>
                 Lives in Helsinki, Finland</p>
               <p>
-                <a href="https://www.linkedin.com/in/tuomo-laine-583a948a/" target="_blank" className="social-link header linkedin"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-                <a href="https://medium.com/@tikilain" target="_blank" className="social-link header medium"><i className="fa fa-medium fa-3x" aria-hidden="true"></i></a>
-                <a href="https://github.com/tuomotlaine" target="_blank" className="social-link header github"><i className="fa fa-github fa-3x" aria-hidden="true"></i></a>
+              {`https://www.linkedin.com/in/tuomo-laine-583a948a/`} <br/>
+              {`https://medium.com/@tikilain`} <br/>
+              {`https://github.com/tuomotlaine`} <br/>
               </p>
               <p>tuomo(at)tuomolaine.com</p>
             </div>

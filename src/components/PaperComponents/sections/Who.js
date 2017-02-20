@@ -57,6 +57,7 @@ class Who extends Component {
           prompts={{
             WhoMore: 'Tell me more about you ',
             Work: 'Show me your latest work',
+            WorkMore: 'Tell me about the other projects.',
             Contact: 'How can I contact you?'
           }}
         />

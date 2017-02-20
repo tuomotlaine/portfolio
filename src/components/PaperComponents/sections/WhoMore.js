@@ -44,7 +44,7 @@ class WhoMore extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="Other than professionally I like to spend my free time by going to the gym, practicing screen-writing (my newest hobby), having a beer with friends and trying to educate myself on relevant topics. <br /><br /> If you want to know even more, contact me via e-mail or phone so we can go for a cup of coffee." onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Other than professionally I like to spend my free time by going to the gym, practicing screen-writing (my newest hobby), having a beer with friends and trying to educate myself on relevant topics. I also like to take photos, even though I usually edit them with Lightroom to be unrealistic but 'artsy'.<br /><br /> If you want to know even more, contact me via e-mail or phone so we can go for a cup of coffee." onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>
@@ -54,7 +54,8 @@ class WhoMore extends Component {
         </div>
         <Prompt userSelected={(args) => {this.props.nextSection(args)}}
           prompts={{
-            Music: 'Just one more... What kind of music do you like?',
+            Music: 'What kind of music do you like?',
+            Photos: 'Show me some of the photos you have taken',
             Work: 'Show me your latest work',
             Contact: 'How can I contact you?'
           }}

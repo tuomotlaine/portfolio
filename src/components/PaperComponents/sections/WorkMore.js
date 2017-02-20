@@ -58,6 +58,8 @@ class WorkMore extends Component {
         <Prompt userSelected={(args) => {this.props.nextSection(args)}}
         prompts={{
           Who: 'Okey. How do you work and what are you like?',
+          WhoMore: 'Tell me more about you ',
+          Photos: 'Show me some of the photos you have taken',
           Contact: 'How can I contact you?'
         }}
         />
