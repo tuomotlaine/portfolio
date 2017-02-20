@@ -36,7 +36,7 @@ class Contact extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="Let's keep this simple shall we? Just send me an e-mail or give me call. I would love to hear what is iin your mind." onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Let's keep this simple shall we? Just send me an e-mail or give me call. I would love to hear what's in your mind." onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>

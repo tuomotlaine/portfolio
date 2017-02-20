@@ -32,7 +32,7 @@ class WhoMore extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="Professionally I would say that I am a generalist - someone who knows a little bit of everything. Look at this awesome ASCII chart to get an idea on which project phases I am most intereted." onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Professionally I would say that I am a generalist - someone who knows a little bit of everything. Look at this awesome ASCII chart to get an idea on which project phases I am most intereted in:" onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>

@@ -96,7 +96,7 @@ class Intro extends Component {
           </div>
           <div className="row">
             <div className="col-xs-12">
-              <TypeWriter speed={20} input="What would like to know about me?" onReady={this.renderComputer.bind(this)} />
+              <TypeWriter speed={20} input="What would you like to know about me?" onReady={this.renderComputer.bind(this)} />
             </div>
           </div>
           <Prompt userSelected={(args) => {this.props.nextSection(args)}}

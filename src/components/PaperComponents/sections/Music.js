@@ -36,7 +36,7 @@ class Music extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="Here is a playlist for you. They are some of the songs I've been listening to lately. Hopefully there is at least one for you." onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Here is a playlist for you. They are some of the songs I've been listening to lately. Hopefully there is at least one song for you." onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>
