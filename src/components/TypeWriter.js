@@ -38,7 +38,7 @@ class TypeWriter extends Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-    
+
     if(this.props.autoScroll){
       document.body.scrollTop = document.body.scrollHeight;
     }
@@ -61,7 +61,7 @@ class TypeWriter extends Component {
 
   render() {
     return(
-      <p className="typewriter-text" style={{fontSize: this.props.fontSize}}><span dangerouslySetInnerHTML={this.state.output}></span><span className={this.state.done ? 'hide' : 'flash'}>_</span></p>
+      <p className={`${this.props.addClass} typewriter-text` } style={{fontSize: this.props.fontSize}}><span dangerouslySetInnerHTML={this.state.output}></span><span className={this.state.done ? 'hide' : 'flash'}>_</span></p>
     );
   }
 }
@@ -70,7 +70,8 @@ TypeWriter.propTypes = {
   input: React.PropTypes.string.isRequired,
   speed: React.PropTypes.number.isRequired,
   onReady: React.PropTypes.func.isRequired,
-  fontSize: React.PropTypes.string
+  fontSize: React.PropTypes.string,
+  addClass: React.PropTypes.string
 };
 
 TypeWriter.defaultProps = {
@@ -78,7 +79,8 @@ TypeWriter.defaultProps = {
   speed: 60,
   fontSize: '1rem',
   defaultAutoScroll: true,
-  forceStartAutoScroll: false
+  forceStartAutoScroll: false,
+  addClass: ''
 };
 
 const mapStateToProps = (state) => {

@@ -81,6 +81,7 @@ class Header extends Component {
               <a href="https://medium.com/@tikilain" target="_blank" className="social-link header medium"><i className="fa fa-medium fa-3x" aria-hidden="true"></i></a>
               <a href="https://github.com/tuomotlaine" target="_blank" className="social-link header github"><i className="fa fa-github fa-3x" aria-hidden="true"></i></a>
             </p>
+            <p>tuomo(at)tuomolaine.com</p>
           </div>
         </div>
       </div>

@@ -24,6 +24,7 @@ class Prompt extends Component {
               );
           })
           }
+          <p className="text-xs-center">***</p>
         </div>
       </div>
     );

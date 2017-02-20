@@ -9,12 +9,19 @@ class Intro extends Component {
     super(props);
     let autoScrollOffOnDesktop = screen.width < 361 ? true : false;
 
+    const convertToTwoDigits = (number) => {return (number < 10 ? '0' : '') + number};
+
     const time = new Date();
+    const date = convertToTwoDigits(time.getDate());
+    const month = convertToTwoDigits(time.getMonth() + 1);
+    const hours = convertToTwoDigits(time.getHours());
+    const minutes = convertToTwoDigits(time.getMinutes());
+    const seconds = convertToTwoDigits(time.getSeconds());
 
     this.state = {
       renderComputerCounter: 0,
       initAutoScroll: autoScrollOffOnDesktop,
-      timeStamp: `${time.getDate()}/${time.getMonth()+1}/${time.getFullYear()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+      timeStamp: `${date}/${month}/${time.getFullYear()} ${hours}:${minutes}:${seconds}`
     }
   }
 

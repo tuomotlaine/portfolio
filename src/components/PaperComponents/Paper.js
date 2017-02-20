@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Intro, Who, WhoMore, Work } from './sections';
-import BottomAddress from './Bottomaddress';
-
-
+import { Intro, Who, WhoMore, Work, WorkMore, Contact, Music } from './sections';
 
 class Paper extends Component {
   constructor(props){
@@ -23,6 +20,31 @@ class Paper extends Component {
     } else if(args === 'Work'){
       let newState = this.state.components;
       newState.push(<Work nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
+      this.setState({
+        components: newState
+      });
+    } else if(args === 'WhoMore'){
+      let newState = this.state.components;
+      newState.push(<WhoMore nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
+      this.setState({
+        components: newState
+      });
+    } else if(args === 'WorkMore'){
+      let newState = this.state.components;
+      newState.push(<WorkMore nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
+      this.setState({
+        components: newState
+      });
+    } else if(args === 'Contact'){
+
+      let newState = this.state.components;
+      newState.push(<Contact nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
+      this.setState({
+        components: newState
+      });
+    } else if(args === 'Music'){
+      let newState = this.state.components;
+      newState.push(<Music nextSection={this.handleSelect.bind(this)} key={new Date().getTime()} />);
       this.setState({
         components: newState
       });
@@ -47,7 +69,6 @@ class Paper extends Component {
       <div className="paper">
         <Intro nextSection={this.handleSelect.bind(this)}/>
         {this.renderChildren()}
-        <BottomAddress />
       </div>
     );
   }

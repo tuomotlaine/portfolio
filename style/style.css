@@ -165,10 +165,25 @@ span a:hover {
   text-decoration: none;
 }
 
+.spotify {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
 /* HELPERS */
 
 .rounded {
   border-radius: 8px;
+}
+
+.monospace {
+  font-family: monospace !important;
+  white-space: pre;
+}
+
+
+.hide {
+  display: none;
 }
 
 /* BLINKER */
@@ -183,8 +198,4 @@ span a:hover {
   from { opacity: 1.0; }
   70% { opacity: 1.0; }
   to { opacity: 0.0; }
-}
-
-.hide {
-  display: none;
 }

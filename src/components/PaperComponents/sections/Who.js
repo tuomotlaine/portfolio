@@ -41,7 +41,7 @@ class Who extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12 col-md-4" style={{paddingBottom: '20px'}}>
-            <img className="img-responsive center-block rounded"  src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgLAAAAJDNjOTdlMzFmLWI3MzMtNDFhOS05NTQyLTNmZTg0Y2VjZjIxOQ.jpg" alt="Image of Tuomo"/>
+            <img className="img-fluid center-block rounded"  src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgLAAAAJDNjOTdlMzFmLWI3MzMtNDFhOS05NTQyLTNmZTg0Y2VjZjIxOQ.jpg" alt="Image of Tuomo"/>
             <figcaption className="text-xs-center">^ This is me.</figcaption>
           </div>
           <div className="col-xs-12 col-md-8">

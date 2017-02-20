@@ -20,42 +20,41 @@ class WhoMore extends Component {
     });
   }
 
-  componentDidUpdate(){
-
-  }
-
   render() {
 
     return(
       <RenderComputer renderChild={this.state.renderComputerCounter}>
         <div className="row" style={{marginTop: '40px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="Who am I? <br/> ------" onReady={this.renderComputer.bind(this)}
+            <TypeWriter speed={20} input="Something more... <br/> ------" onReady={this.renderComputer.bind(this)}
             fontSize="1.1rem" />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="I am a novice entrepreneur, service designer and prototyping enthusiastic from Helsinki, who enjoys making ideas reality." onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Professionally I would say that I am a generalist - someone who knows a little bit of everything. Look at this awesome ASCII chart to get an idea on which project phases I am most intereted." onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>
-          <div className="col-xs-12 col-md-4" style={{paddingBottom: '20px'}}>
-            <img className="img-responsive center-block rounded"  src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgLAAAAJDNjOTdlMzFmLWI3MzMtNDFhOS05NTQyLTNmZTg0Y2VjZjIxOQ.jpg" alt="Image of Tuomo"/>
-            <figcaption className="text-xs-center">^ This is me.</figcaption>
-          </div>
-          <div className="col-xs-12 col-md-8">
-            <TypeWriter speed={20} input="I usually start my projects by trying to understand the underlying business and customer problems at hand. For this I use tools like <a target='_blank' href='https://leanservicecreation.com/'>Lean Service Creation.</a> <br /> <br /> The first prototypes I usually build by pen and paper, from which I gradually move to use technologies such as Adobe PS/XD/AI, HTML, CSS, Javascript, Firebase, React.js or React-Native." onReady={this.renderComputer.bind(this)}/>
+          <div className="col-xs-12" style={{paddingBottom: '20px'}}>
+            <TypeWriter addClass="text-xs-center monospace" speed={20}
+            input="5   -                         <br />4   *      -                  <br />3   *      *       -          <br />2   *      *       *          <br />1   *      *       *       -  <br />0---*------*-------*-------*--<br />Service  UX/UI   Front-  Back-<br />Design           end     end  <br />  " onReady={this.renderComputer.bind(this)} />
+            <figcaption className="text-xs-center">These are my interest-levels.</figcaption>
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="What would you like to know next?" onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Other than professionally I like to spend my free time by going to the gym, practicing screen-writing (my newest hobby), having a beer with friends and trying to educate myself on relevant topics. <br /><br /> If you want to know even more, contact me via e-mail or phone so we can go for a cup of coffee." onReady={this.renderComputer.bind(this)} />
+          </div>
+        </div>
+        <div className="row" style={{marginTop: '24px'}}>
+          <div className="col-xs-12">
+            <TypeWriter speed={20} input="I don't know why, but I love that ASCII graph! So what would you like to ask then?" onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <Prompt userSelected={(args) => {this.props.nextSection(args)}}
           prompts={{
-            WhoMore: 'Tell me more about you ',
+            Music: 'Just one more... What kind of music do you like?',
             Work: 'Show me your latest work',
             Contact: 'How can I contact you?'
           }}
