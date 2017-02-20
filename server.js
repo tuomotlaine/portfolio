@@ -9,7 +9,7 @@ app.use(express.static('dist'));
 app.use(bodyParser.json());
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist/index.html'));
+  res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 
