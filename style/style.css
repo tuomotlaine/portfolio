@@ -15,7 +15,13 @@ body {
   height: 100%;
   max-width: 720px;
   margin: 0 auto;
-  padding-top: 400px;
+  margin-top: 400px;
+}
+
+@media (max-width: 768px) {
+  body{
+    height: calc(100% - 400px);
+  }
 }
 
 /* OVERWRITES */
