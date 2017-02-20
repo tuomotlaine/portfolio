@@ -15,7 +15,7 @@ class Prompt extends Component {
   }
 
   render(){
-
+    console.log(this.props.shownContent);
     return(
       <div className="row" style={{paddingTop: '20px'}}>
         <div className="col-xs-12 text-xs-center">
@@ -26,20 +26,20 @@ class Prompt extends Component {
 
                 switch(k) {
                   case 'WhoMore':
-                    if(!_.includes(this.props.shownContent, 'Who')){
+                    if(!_.includes(this.props.shownContent, 'Who') || _.includes(this.props.shownContent, 'WhoMore')){
                       return;
                     }else {
                       return (<p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>);
                     }
 
                   case 'WorkMore':
-                    if(!_.includes(this.props.shownContent, 'Work')){
+                    if(!_.includes(this.props.shownContent, 'Work') || _.includes(this.props.shownContent, 'WorkMore')){
                       return;
                     }else{
                       return (<p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>);
                     }
                   case 'Photos':
-                    if(!_.includes(this.props.shownContent, 'WhoMore')){
+                    if(!_.includes(this.props.shownContent, 'WhoMore') || _.includes(this.props.shownContent, 'Photos')){
                       return;
                     }else{
                       return (<p key={uniqueKey}><a onClick={() => {this.handleClick(`${k}`)}} className="option">{v}</a></p>);
