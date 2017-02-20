@@ -40,7 +40,7 @@ class Intro extends Component {
   render() {
 
     const headerStyle = {
-      visibility: 'hidden',
+      display: 'none',
       paddingTop: '32px',
       width: '720px',
       position: 'absolute',

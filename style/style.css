@@ -223,6 +223,10 @@ span a:hover {
     visibility: visible;
   }
 
+  .print-header {
+    display: block !important;
+  }
+
   .print-header * {
     visibility: visible;
   }
