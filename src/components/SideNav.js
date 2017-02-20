@@ -49,13 +49,13 @@ class SideNav extends Component {
         </div>
         <div className="definitions row">
           <div className="col-xs-12 text-xs-center">
-            <a href="https://www.linkedin.com/in/tuomo-laine-583a948a/" className="social-link linkedin"><i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/tuomo-laine-583a948a/" className="social-link linkedin" target="_blank"><i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
           </div>
           <div className="col-xs-12 text-xs-center" style={{ paddingTop: '24px' }}>
-            <a href="https://medium.com/@tikilain" className="social-link medium"><i className="fa fa-medium fa-2x" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@tikilain" className="social-link medium" target="_blank"><i className="fa fa-medium fa-2x" aria-hidden="true"></i></a>
           </div>
           <div className="col-xs-12 text-xs-center" style={{ paddingTop: '24px' }}>
-            <a href="https://github.com/tuomotlaine" target="_blank" className="social-link github"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
+            <a href="https://github.com/tuomotlaine" target="_blank" className="social-link github" target="_blank"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>

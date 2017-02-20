@@ -41,7 +41,7 @@ class Music extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <iframe className="spotify" src="https://embed.spotify.com/?uri=spotify:user:fruitfaffel:playlist:7dwVgFVlINDwV2EuhF8kmM" width="300" height="380" frameBorder="0" allowTransparency="true"></iframe>
+            <iframe className="spotify" src="https://embed.spotify.com/?uri=spotify:user:fruitfaffel:playlist:7dwVgFVlINDwV2EuhF8kmM" width="280" height="380" frameBorder="0" allowTransparency="true"></iframe>
           </div>
           <div className="col-xs-12">
             <TypeWriter speed={20} input="Would you still want to ask something?" onReady={this.renderComputer.bind(this)} />

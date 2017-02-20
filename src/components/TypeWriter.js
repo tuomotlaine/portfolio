@@ -40,7 +40,11 @@ class TypeWriter extends Component {
   componentDidUpdate(prevProps, prevState){
 
     if(this.props.autoScroll){
-      document.body.scrollTop = document.body.scrollHeight;
+      if(document.body.scrollTop + 10 < document.body.scrollHeight){
+        document.body.scrollTop = document.body.scrollTop + 16;
+      }else{
+        document.body.scrollTop = document.body.scrollHeight;
+      }
     }
 
     if(prevState.key != this.state.key && this.state.key < this.state.input.length){

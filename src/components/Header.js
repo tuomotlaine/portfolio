@@ -18,18 +18,19 @@ class Header extends Component {
       top: `-${pos}px`
     });
 
-    let newScrollDetection = this.state.scrollDetection + 1;
+    let newScrollDetection = this.state.scrollDetection + 2;
     setTimeout(() => {
       this.setState({
         scrollDetection: 0
       });
-    }, 2000);
+    }, 400);
 
     this.setState({
       scrollDetection: newScrollDetection
     });
 
-    if(this.state.scrollDetection > 18){
+    console.log('sd:', this.state.scrollDetection);
+    if(this.state.scrollDetection > 39){
       this.props.toggleAutoScroll(false);
       this.setState({
         scrollDetection: 0

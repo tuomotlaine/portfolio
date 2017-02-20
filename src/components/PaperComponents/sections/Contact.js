@@ -41,7 +41,7 @@ class Contact extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="My e-mail: tuomo(at)tuomolaine.com <br />My phone: +358 41 505 83 91 <br /> <br />I live in Töölö, if you want to stalk me in real life."  onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="<b>My e-mail:</b> tuomo(at)tuomolaine.com <br /><b>My phone:</b> +358 41 505 83 91 <br /> <br />I live in Töölö, if you want to stalk me in real life."  onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>
