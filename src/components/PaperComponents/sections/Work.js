@@ -36,7 +36,7 @@ class Work extends Component {
         </div>
         <div className="row" style={{marginTop: '24px'}}>
           <div className="col-xs-12">
-            <TypeWriter speed={20} input="Lately I've been working on two main projects: Mobile Electric and Rentle, which we operate under a company I co-founded called <a href='http://www.vitrine-digital.fi' target='_blank'>Vitrine Digital</a>. I just re-designed and coded the website for ME and Virine Digital. Also writing my thesis is taking a bit of my time. The working title is 'How service creation tools &amp; methods help inexperienced pre-seed start ups reach problem-solution fit?'" onReady={this.renderComputer.bind(this)} />
+            <TypeWriter speed={20} input="Lately I've been working on two main projects: Mobile Electric and Rentle, which we operate under a company I co-founded called <a href='http://www.vitrine-digital.fi' target='_blank'>Vitrine Digital</a>. I just re-designed and coded the website for ME and Vitrine Digital. Also writing my thesis is taking a bit of my time. The working title is 'How service creation tools &amp; methods help inexperienced pre-seed start ups reach problem-solution fit?'" onReady={this.renderComputer.bind(this)} />
           </div>
         </div>
         <div className="row" style={{marginTop: '24px'}}>
